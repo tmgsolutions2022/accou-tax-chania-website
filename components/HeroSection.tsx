@@ -1,6 +1,11 @@
+'use client';
+
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 
 const HeroSection = () => {
+  const t = useTranslations('hero');
+
   return (
     <section id="home">
       <div className="@container">
@@ -14,17 +19,17 @@ const HeroSection = () => {
           >
             <div className="flex flex-col gap-2 text-center max-w-2xl">
               <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
-                Expert Accounting for Your Business
+                {t('title')}
               </h1>
               <h2 className="text-white/90 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
-                Reliable, professional, and tailored financial services to help you grow.
+                {t('subtitle')}
               </h2>
             </div>
             <Link
               href="#contact"
               className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary hover:bg-opacity-90 text-white text-base font-bold leading-normal tracking-[0.015em]"
             >
-              <span className="truncate">Get a Free Consultation</span>
+              <span className="truncate">{t('cta')}</span>
             </Link>
           </div>
         </div>

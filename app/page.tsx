@@ -1,19 +1,6 @@
-import HeroSection from '../components/HeroSection';
-import ServicesSection from '../components/ServicesSection';
-import TeamSection from '../components/TeamSection';
-import TestimonialsSection from '../components/TestimonialsSection';
-import ContactSection from '../components/ContactSection';
+import { redirect } from 'next/navigation';
+import { routing } from '../i18n/routing';
 
-const HomePage = () => {
-  return (
-    <>
-      <HeroSection />
-      <ServicesSection />
-      <TeamSection />
-      <TestimonialsSection />
-      <ContactSection />
-    </>
-  );
-};
-
-export default HomePage;
+export default function RootPage() {
+  redirect(`/${routing.defaultLocale}`);
+}

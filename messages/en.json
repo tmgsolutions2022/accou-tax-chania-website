@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "title": "AccouTaxChania - Expert Accounting Services",
+    "description": "Reliable, professional, and tailored financial services to help you grow."
+  },
+  "header": {
+    "services": "Services",
+    "about": "About Us",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Expert Accounting for Your Business",
+    "subtitle": "Reliable, professional, and tailored financial services to help you grow.",
+    "cta": "Get a Free Consultation"
+  },
+  "services": {
+    "title": "Our Services",
+    "taxPreparation": {
+      "title": "Tax Preparation",
+      "description": "Maximize your returns with our expert tax filing services for individuals and businesses."
+    },
+    "bookkeeping": {
+      "title": "Bookkeeping",
+      "description": "Accurate and timely bookkeeping to keep your finances in order and provide clear insights."
+    },
+    "payroll": {
+      "title": "Payroll Services",
+      "description": "Streamline your payroll process, ensuring compliance, accuracy, and timeliness."
+    },
+    "consulting": {
+      "title": "Financial Consulting",
+      "description": "Strategic advice to help you make informed financial decisions and achieve your goals."
+    }
+  },
+  "team": {
+    "title": "Meet Our Team",
+    "member1": {
+      "name": "Kiki Stavroulaki",
+      "description": "Our dedicated professional, ready to assist with all your accounting needs."
+    },
+    "member2": {
+      "name": "Giorgos Stavroulakis",
+      "description": "Experienced and reliable, ensuring your financial matters are handled with expertise."
+    },
+    "member3": {
+      "name": "G. Michelogiannakis",
+      "description": "Committed to providing strategic financial guidance and support for your business."
+    }
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "testimonial1": {
+      "quote": "AccouTaxChania transformed our financial processes. Their attention to detail and proactive advice have been invaluable to our growth.",
+      "author": "- Sarah L., CEO of Innovate Co."
+    },
+    "testimonial2": {
+      "quote": "As a small business owner, I can finally focus on my work knowing my bookkeeping and taxes are in expert hands. Highly recommended!",
+      "author": "- Mike R., Owner of The Corner Cafe"
+    },
+    "testimonial3": {
+      "quote": "The team is professional, responsive, and incredibly knowledgeable. They made payroll a breeze for our company.",
+      "author": "- Emily C., HR Manager at Tech Solutions"
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "form": {
+      "title": "Send us a Message",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Submit"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": {
+        "label": "Address",
+        "value": "44 Apokoronou St., 73134 Chania"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "+30 28210 55528"
+      },
+      "email": {
+        "label": "Email",
+        "value": "contact@accoutaxchania.gr"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 AccouTaxChania. All Rights Reserved."
+  }
+}

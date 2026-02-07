@@ -1,28 +1,29 @@
-import Image from 'next/image';
+'use client';
+
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 const TeamSection = () => {
+  const t = useTranslations('team');
+
   const team = [
     {
-      name: 'Kiki Stavroulaki',
-      description:
-        'Our dedicated professional, ready to assist with all your accounting needs.',
+      nameKey: 'member1.name',
+      descKey: 'member1.description',
       phone: '+30 6980 600457',
       image:
         'https://lh3.googleusercontent.com/aida-public/AB6AXuCpAZBt4UJHn-nxA4SGC77Suwj723_K0py_zDh6d7NWsL_MxY0C1CTGdXM_vIbVcvjtGkptvAbScyqnUGNBE3U-WFUBn2YNTy-2zuqLHsQk1xc8hMkaVBun7FtMx5m183QeeBzdJc9h4tQrfvTNtR9YKVidWWJigeqKIbDghQ4xXpy7SCfFVzroxUFnSkbvErHoqy-SiwK1kpWsOk5p4VMeKT0iLOe5pmi7h_3wHHpuJCl9Qht-4PgJTA2Mwzhef3S53YyC8b8MSQim'
     },
     {
-      name: 'Giorgos Stavroulakis',
-      description:
-        'Experienced and reliable, ensuring your financial matters are handled with expertise.',
+      nameKey: 'member2.name',
+      descKey: 'member2.description',
       phone: '+30 6980 887437',
       image:
         'https://lh3.googleusercontent.com/aida-public/AB6AXuAQg6Vbx7ZDkJb7JQouFd22-mHBpg9cbn6HJ2gYXrMfa1Q74gVogrdgBmP5On4oRAZFtnlF0cntsr6-vNY4BwGiYs4ERuFsbc1xVHzBTDED4p3laaUwk-8-tapEk2RzvDx9q2N4wXKDtPe7R_z9GMOal_Bbdu6ZsM0Vxc8vVOxb6lsa9chCrgfgmAEEiBGwdet7EcB4mMjqeajCA9ZdaS5Bii8cHW4hpbtZnVrlolp0_64jembNFzXPsPh1ztJirQnciaA0354yWTpz'
     },
     {
-      name: 'G. Michelogiannakis',
-      description:
-        'Committed to providing strategic financial guidance and support for your business.',
+      nameKey: 'member3.name',
+      descKey: 'member3.description',
       phone: '+30 6982 386622',
       image:
         'https://lh3.googleusercontent.com/aida-public/AB6AXuDLdCTGmcbf-AUTZTgj4Sd3wl5daBJKBiIPW76lOTRmPQOUjnsmjnDVBXuneRFmE8uTYvrqCiqJLMkunutlFgIRVqq_0n_NVWdeHOGh-2n7gB-e92u_INC-GuHZD5tSb71WwzB1PdnZ3SeVRpvqGAPYJx1WQqHBTW4KrxPeBixmUi1F1-R7cpXiovdpVqlnhZHPotJ2VekV8aPgCKWfVBbNpkgg0OLb3jV7nsQu8QW3iGR9t70Q_6ayU5FbiNQlXGstyMhKnsd3DYTk'
@@ -36,7 +37,7 @@ const TeamSection = () => {
     >
       <div className='container mx-auto px-4'>
         <h2 className='text-center text-neutral-text dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] mb-8'>
-          Meet Our Team
+          {t('title')}
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto'>
           {team.map((member, index) => (
@@ -46,17 +47,17 @@ const TeamSection = () => {
             >
               <img
                 src={member.image}
-                alt={`Headshot of ${member.name}`}
+                alt={`Headshot of ${t(member.nameKey)}`}
                 width={128}
                 height={128}
                 className='w-32 h-32 rounded-full object-cover shrink-0 border-4 border-primary/50'
               />
               <div className='flex flex-col items-center'>
                 <h3 className='text-neutral-text dark:text-white text-xl font-bold'>
-                  {member.name}
+                  {t(member.nameKey)}
                 </h3>
                 <p className='text-stone-600 dark:text-dark-subtext text-sm mb-2'>
-                  {member.description}
+                  {t(member.descKey)}
                 </p>
                 <Link
                   href={`tel:${member.phone}`}
