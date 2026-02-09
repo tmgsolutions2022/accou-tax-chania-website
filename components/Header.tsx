@@ -2,40 +2,44 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header className='sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm shadow-sm'>
-      <div className='container mx-auto flex items-center p-4 justify-between'>
-        <Link href='#' className='flex items-center gap-2'>
+    <header className='sticky top-0 z-50 w-full border-b border-white/10 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80 supports-[backdrop-filter]:bg-background-light/60'>
+      <div className='container mx-auto flex h-20 items-center justify-between px-4'>
+        <Link
+          href='#'
+          className='flex items-center gap-2 transition-opacity hover:opacity-90'
+        >
           <img
             src='assets/images/logo.png'
-            alt='AccouTax Chania logo with a geometric shape'
-            className='h-10'
-            height={40}
+            alt='AccouTax Chania'
+            className='h-12 w-auto object-contain'
+            height={48}
+            width={120}
           />
         </Link>
-        <nav className='hidden md:flex items-center space-x-6'>
+        <nav className='hidden items-center gap-8 md:flex'>
           <Link
             href='#services'
-            className='text-sm font-bold text-neutral-text dark:text-dark-text hover:text-primary dark:hover:text-primary'
+            className='text-sm font-semibold text-neutral-text transition-colors hover:text-primary dark:text-dark-text dark:hover:text-primary'
           >
             Services
           </Link>
           <Link
             href='#about'
-            className='text-sm font-bold text-neutral-text dark:text-dark-text hover:text-primary dark:hover:text-primary'
+            className='text-sm font-semibold text-neutral-text transition-colors hover:text-primary dark:text-dark-text dark:hover:text-primary'
           >
-            About Us
+            Team
           </Link>
           <Link
             href='#testimonials'
-            className='text-sm font-bold text-neutral-text dark:text-dark-text hover:text-primary dark:hover:text-primary'
+            className='text-sm font-semibold text-neutral-text transition-colors hover:text-primary dark:text-dark-text dark:hover:text-primary'
           >
             Testimonials
           </Link>
           <Link
             href='#contact'
-            className='text-sm font-bold text-neutral-text dark:text-dark-text hover:text-primary dark:hover:text-primary'
+            className='rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-lg transition-all hover:bg-opacity-90 hover:shadow-primary/25 active:scale-95'
           >
-            Contact
+            Contact Us
           </Link>
         </nav>
       </div>
