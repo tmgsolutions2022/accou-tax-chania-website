@@ -13,7 +13,7 @@ const HeroSection = () => {
         <div
           className='h-full w-full bg-cover bg-center bg-no-repeat opacity-90'
           style={{
-            backgroundImage: 'url("/assets/images/hero-bg.png")'
+            backgroundImage: 'url("assets/images/hero-bg.png")'
           }}
         />
       </div>
