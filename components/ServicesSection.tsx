@@ -1,57 +1,71 @@
+import { FadeIn, StaggerContainer, StaggerItem } from './ScrollAnimation';
+
 const ServicesSection = () => {
   const services = [
     {
-      icon: "calculate",
-      title: "Tax Preparation",
+      icon: 'calculate',
+      title: 'Tax Strategy & Compliance',
       description:
-        "Maximize your returns with our expert tax filing services for individuals and businesses.",
+        'Maximize returns and ensure full compliance with expert tax filing for individuals and corporate entities.'
     },
     {
-      icon: "menu_book",
-      title: "Bookkeeping",
+      icon: 'menu_book',
+      title: 'Precision Bookkeeping',
       description:
-        "Accurate and timely bookkeeping to keep your finances in order and provide clear insights.",
+        'Maintain impeccable financial records with our accurate, timely, and transparent bookkeeping services.'
     },
     {
-      icon: "payments",
-      title: "Payroll Services",
+      icon: 'payments',
+      title: 'Seamless Payroll',
       description:
-        "Streamline your payroll process, ensuring compliance, accuracy, and timeliness.",
+        'Streamline payroll processing to ensure accuracy, timeliness, and full regulatory compliance.'
     },
     {
-      icon: "trending_up",
-      title: "Financial Consulting",
+      icon: 'trending_up',
+      title: 'Business Advisory',
       description:
-        "Strategic advice to help you make informed financial decisions and achieve your goals.",
-    },
+        'Unlock growth potential with strategic financial consulting tailored to your business goals.'
+    }
   ];
 
   return (
-    <section className="py-16 bg-neutral-background dark:bg-dark-neutral-background" id="services">
-      <div className="container mx-auto px-4">
-        <h2 className="text-center text-neutral-text dark:text-white text-3xl font-bold leading-tight tracking-[-0.015em] mb-8">
-          Our Services
-        </h2>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6">
+    <section
+      className='py-24 bg-neutral-background dark:bg-dark-neutral-background'
+      id='services'
+    >
+      <div className='container mx-auto px-4'>
+        <FadeIn>
+          <div className='text-center max-w-2xl mx-auto mb-16'>
+            <h2 className='text-3xl sm:text-4xl font-extrabold text-neutral-text dark:text-white tracking-tight mb-4'>
+              Comprehensive Financial Solutions
+            </h2>
+            <p className='text-lg text-stone-600 dark:text-dark-subtext'>
+              We provide a full suite of services designed to secure your
+              financial future and drive business performance.
+            </p>
+          </div>
+        </FadeIn>
+
+        <StaggerContainer className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
           {services.map((service, index) => (
-            <div
+            <StaggerItem
               key={index}
-              className="flex flex-1 gap-4 rounded-xl border border-stone-200 dark:border-stone-700 bg-background-light dark:bg-background-dark p-6 flex-col items-center text-center"
+              className='group relative flex flex-col items-center text-center p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-stone-200 dark:border-stone-800 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-primary/30'
             >
-              <span className="material-symbols-outlined text-primary text-4xl">
-                {service.icon}
-              </span>
-              <div className="flex flex-col gap-1">
-                <h3 className="text-neutral-text dark:text-white text-lg font-bold leading-tight">
-                  {service.title}
-                </h3>
-                <p className="text-stone-600 dark:text-dark-subtext text-sm font-normal leading-normal">
-                  {service.description}
-                </p>
+              <div className='mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white'>
+                <span className='material-symbols-outlined text-3xl'>
+                  {service.icon}
+                </span>
               </div>
-            </div>
+              <h3 className='mb-3 text-xl font-bold text-neutral-text dark:text-white'>
+                {service.title}
+              </h3>
+              <p className='text-stone-600 dark:text-dark-subtext leading-relaxed'>
+                {service.description}
+              </p>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
