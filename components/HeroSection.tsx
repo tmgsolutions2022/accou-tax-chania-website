@@ -9,12 +9,11 @@ const HeroSection = () => {
     >
       {/* Background Image with Overlay */}
       <div className='absolute inset-0 z-0'>
-        <div className='absolute inset-0 bg-gradient-to-r from-background-dark/95 via-background-dark/80 to-background-dark/40 z-10' />
+        <div className='absolute inset-0 bg-background-dark/40 z-10' />
         <div
-          className='h-full w-full bg-cover bg-center bg-no-repeat opacity-60 mix-blend-overlay'
+          className='h-full w-full bg-cover bg-center bg-no-repeat opacity-90'
           style={{
-            backgroundImage:
-              'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcWt6pKtDrJ_tZI_NJEWov1ZScvxmsvk1cLgq4gxmqfCxEEtPiJL_8n0I9zWb3OySz0OBojpy-lDds-zvm06R84H6S0OcXvham4FNqsmnv2eYi3BDjBKH8g1o2GTPMhDMdzQTSAEuNdtAIrpDHap3kDY5IQbwjEptnYJEIv8oyVJGFCUksF0r6E4JM0WcC-es-iIPas1UHXEV0RR26qGnwFRFKTUwxCO7mRmg0ZU4fn5EG2qHXV2p_8pBHf-Z0GunGaF2UUPBSqeYg")'
+            backgroundImage: 'url("/assets/images/hero-bg.png")'
           }}
         />
       </div>
